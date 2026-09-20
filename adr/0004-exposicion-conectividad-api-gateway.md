@@ -45,8 +45,15 @@ Security Group. Se definen dos rutas en el HTTP API:
 
 | Ruta | Método | Integración |
 |---|---|---|
-| `/usuarios/{proxy+}` | ANY | VPC Link → ALB interno (target group de Usuarios) |
-| `/pagos/{proxy+}` | ANY | VPC Link → ALB interno (target group de Pagos) |
+| `/usuarios` | ANY | VPC Link (compartido) → ALB interno (target group de Usuarios) |
+| `/usuarios/{proxy+}` | ANY | VPC Link (compartido) → ALB interno (target group de Usuarios) |
+| `/pagos` | ANY | VPC Link (compartido) → ALB interno (target group de Pagos) |
+| `/pagos/{proxy+}` | ANY | VPC Link (compartido) → ALB interno (target group de Pagos) |
+
+Se define una ruta exacta adicional junto a cada `{proxy+}` porque este
+comodín solo hace match con paths que tengan **al menos un segmento**
+después de la barra (`/usuarios/1`, `/usuarios/health`), no cubre el path
+base exacto (`/usuarios`) por sí solo.
 
 El uso de `{proxy+}` permite que cada microservicio maneje sus propias
 subrutas internas sin declarar cada endpoint individualmente.
