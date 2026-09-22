@@ -126,7 +126,7 @@ alcance de esta evaluación.
 
 ## Estado del proyecto
 
-🚧 En desarrollo - Módulo 7 del Bootcamp de Arquitectura Cloud (SOFOFA).
+✅ Completado - Módulo 7 del Bootcamp de Arquitectura Cloud.
 
 ## Autor
 
