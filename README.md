@@ -1,5 +1,7 @@
 # MicroPay — Microservicios Orquestados en AWS
 
+> Nota: el despliegue vivo se realizó sobre AWS Academy Learner Lab, cuyos recursos se destruyen al finalizar cada sesión. El código y la infraestructura documentada son reproducibles siguiendo los pasos de `docs/`.
+
 Proyecto de arquitectura cloud desarrollado como Evaluación del Módulo 7 del
 Bootcamp de Arquitectura Cloud (SOFOFA). Diseña e implementa la migración de un
 sistema monolítico a una arquitectura de microservicios orquestados en AWS,
